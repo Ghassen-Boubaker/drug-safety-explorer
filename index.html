@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Drug Safety Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+    <!-- Top Bar with Language Selector -->
+    <div style="display: flex; justify-content: flex-end; align-items: center; gap: 0.5rem;">
+      <label for="langSelect" style="font-size: 0.85rem; font-weight: 600; color: #475569;">🌐 Language / Langue:</label>
+      <select id="langSelect" style="padding: 0.3rem 0.6rem; border-radius: 6px; border: 1px solid #cbd5e1; cursor: pointer;">
+        <option value="en" selected>English 🇬🇧</option>
+        <option value="fr">Français 🇫🇷</option>
+      </select>
+    </div>
+
+    <!-- Header -->
+    <header class="app-header">
+      <h1 id="txtTitle">⚕️ Global Drug Safety Explorer</h1>
+      <p id="txtSubtitle">Search active pharmaceutical ingredients and check condition-specific risks.</p>
+    </header>
+
+    
+    <section class="search-section">
+      <div class="search-box">
+        <input type="text" id="drugInput" placeholder="Enter drug name (e.g., Ibuprofen, Paracetamol, Doliprane)..." />
+        <button id="searchBtn">Search Drug</button>
+      </div>
+
+      
+      <div class="conditions-container">
+        <label id="txtConditionLabel">Select pre-existing conditions to check for interactions:</label>
+        <div class="condition-chips">
+          <label class="chip"><input type="checkbox" value="pregnancy"> <span id="lblPregnancy">🤰 Pregnancy</span></label>
+          <label class="chip"><input type="checkbox" value="hypertension"> <span id="lblHypertension">🫀 High Blood Pressure</span></label>
+          <label class="chip"><input type="checkbox" value="asthma"> <span id="lblAsthma">🫁 Asthma</span></label>
+          <label class="chip"><input type="checkbox" value="kidney"> <span id="lblKidney">🩺 Kidney Issues</span></label>
+        </div>
+      </div>
+    </section>
+
+    
+    <aside class="disclaimer-banner">
+      <strong id="txtDisclaimerTitle">Educational Notice:</strong> 
+      <span id="txtDisclaimerText">Information provided is pulled from public health APIs (openFDA). This tool does not provide medical advice. Always consult a certified physician.
+        This WebSite is only built for Educational purposes only!!!
+      </span>
+    </aside>
+
+   
+    <section id="results" class="results-grid"></section>
+  </main>
+
+  <script src="app.js"></script>
+  <footer class="app-footer">
+  <p>
+    Developed by 
+    <a href="https://github.com/Ghassen-Boubaker" target="_blank" rel="noopener noreferrer">
+      Ghassen Boubaker
+    </a>
+  </p>
+</footer>
+</body>
+
+</html>
